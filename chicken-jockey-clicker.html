@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chicken Jockey Clicker - Fun Clicker Game</title>
+  <meta name="description" content="Play Chicken Jockey Clicker - a fun clicker game where you ride chickens, collect coins and unlock achievements!">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'game-yellow': '#FFD54F',
+            'game-orange': '#FFA726',
+            'game-brown': '#8D6E63',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .game-title { font-family: 'Fredoka One', cursive; }
+  </style>
+</head>
+<body class="bg-amber-50 text-gray-800">
+  <!-- 导航栏 -->
+  <header class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center space-x-2">
+          <img src="https://img.icons8.com/emoji/48/000000/chicken-emoji.png" alt="Chicken Logo" class="w-10 h-10">
+          <span class="game-title text-2xl font-bold text-game-orange">Chicken Jockey Clicker</span>
+        </div>
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="#game" class="font-medium hover:text-game-orange">Play Game</a>
+          <a href="#about" class="font-medium hover:text-game-orange">About</a>
+          <a href="#leaderboard" class="font-medium hover:text-game-orange">Leaderboard</a>
+          <a href="#comments" class="font-medium hover:text-game-orange">Comments</a>
+        </nav>
+        <button class="md:hidden p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主内容区 -->
+  <main class="container mx-auto px-4 py-6">
+    <!-- 游戏区 -->
+    <section id="game" class="mb-10">
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="aspect-video w-full" style="height:65vh;">
+          <iframe src="https://chickenjockeyclicker.io/" title="Chicken Jockey Clicker Game" class="w-full h-full border-0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 游戏信息 -->
+    <section id="about" class="mb-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- 游戏介绍 -->
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <h2 class="game-title text-2xl text-game-brown mb-4">What is Chicken Jockey Clicker?</h2>
+          <p class="text-gray-700">
+            Chicken Jockey Clicker is a fun and casual clicker game. Tap to ride your chicken, collect coins, 
+            and unlock new skins and achievements!
+          </p>
+        </div>
+        
+        <!-- 游戏玩法 -->
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <h2 class="game-title text-2xl text-game-brown mb-4">How to Play?</h2>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-center"><span class="mr-2">🐔</span> Click to run your chicken!</li>
+            <li class="flex items-center"><span class="mr-2">💰</span> Collect coins to upgrade</li>
+            <li class="flex items-center"><span class="mr-2">🏆</span> Unlock skins and achievements</li>
+            <li class="flex items-center"><span class="mr-2">🔥</span> Aim for high scores!</li>
+          </ul>
+        </div>
+        
+        <!-- 相关链接 -->
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <h2 class="game-title text-2xl text-game-brown mb-4">Useful Links</h2>
+          <ul class="space-y-2">
+            <li><a href="#" class="flex items-center text-game-brown hover:text-game-orange"><span class="mr-2">🖥️</span>Scratch Version</a></li>
+            <li><a href="#" class="flex items-center text-game-brown hover:text-game-orange"><span class="mr-2">🎮</span>More Clicker Games</a></li>
+            <li><a href="#" class="flex items-center text-game-brown hover:text-game-orange"><span class="mr-2">💡</span>Clicker Game Tips</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 排行榜和广告区 -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
+      <!-- 排行榜 -->
+      <div id="leaderboard" class="lg:col-span-2 bg-white rounded-xl shadow-md overflow-hidden">
+        <div class="bg-game-orange p-4">
+          <h2 class="game-title text-2xl text-white text-center">Top Players</h2>
+        </div>
+        <table class="w-full">
+          <thead>
+            <tr class="bg-amber-50">
+              <th class="py-3 px-4 text-left">#</th>
+              <th class="py-3 px-4 text-left">Player</th>
+              <th class="py-3 px-4 text-left">Score</th>
+              <th class="py-3 px-4 text-left">Achievements</th>
+              <th class="py-3 px-4 text-left">Last Played</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-amber-100">
+            <tr class="hover:bg-amber-50">
+              <td class="py-3 px-4 font-bold text-amber-600">1</td>
+              <td class="py-3 px-4">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 rounded-full bg-red-400 flex items-center justify-center text-white font-bold mr-2">C</div>
+                  <span>ChickenMaster99</span>
+                </div>
+              </td>
+              <td class="py-3 px-4 font-mono font-bold">1,234,567</td>
+              <td class="py-3 px-4"><span class="text-amber-400">★★★★★</span></td>
+              <td class="py-3 px-4 text-gray-500">Today</td>
+            </tr>
+            <tr class="hover:bg-amber-50">
+              <td class="py-3 px-4 font-bold text-gray-400">2</td>
+              <td class="py-3 px-4">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 rounded-full bg-blue-400 flex items-center justify-center text-white font-bold mr-2">J</div>
+                  <span>JockeyPro</span>
+                </div>
+              </td>
+              <td class="py-3 px-4 font-mono font-bold">987,654</td>
+              <td class="py-3 px-4"><span class="text-amber-400">★★★★</span><span class="text-gray-300">★</span></td>
+              <td class="py-3 px-4 text-gray-500">Yesterday</td>
+            </tr>
+            <tr class="hover:bg-amber-50">
+              <td class="py-3 px-4 font-bold text-amber-700">3</td>
+              <td class="py-3 px-4">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 rounded-full bg-green-400 flex items-center justify-center text-white font-bold mr-2">E</div>
+                  <span>EggCollector</span>
+                </div>
+              </td>
+              <td class="py-3 px-4 font-mono font-bold">876,543</td>
+              <td class="py-3 px-4"><span class="text-amber-400">★★★</span><span class="text-gray-300">★★</span></td>
+              <td class="py-3 px-4 text-gray-500">3 days ago</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="bg-amber-50 p-4 text-center">
+          <button class="bg-game-orange hover:bg-orange-500 text-white font-bold py-2 px-6 rounded-full">
+            View Full Leaderboard
+          </button>
+        </div>
+      </div>
+
+      <!-- 广告区 -->
+      <div class="lg:col-span-1">
+        <div class="bg-white p-3 rounded-xl shadow-md">
+          <p class="text-gray-500 text-xs mb-1 text-center">Advertisement</p>
+          <div class="bg-gray-100 h-60 flex items-center justify-center text-gray-400">
+            <p>Your Ad Here - 300x250</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 评论区 -->
+    <section id="comments" class="mb-10">
+      <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <div class="bg-game-orange p-4">
+          <h2 class="game-title text-2xl text-white text-center">Comments</h2>
+        </div>
+        
+        <!-- 评论表单 -->
+        <div class="p-6 border-b border-amber-100">
+          <div class="flex items-start space-x-4">
+            <div class="w-10 h-10 bg-amber-200 rounded-full flex items-center justify-center text-white font-bold">U</div>
+            <div class="flex-grow">
+              <textarea class="w-full p-3 border border-amber-200 rounded-lg" rows="3" placeholder="Share your experience..."></textarea>
+              <div class="mt-3 flex justify-between items-center">
+                <div class="flex items-center">
+                  <div class="flex mr-2">
+                    <button class="text-amber-400">★</button>
+                    <button class="text-amber-400">★</button>
+                    <button class="text-amber-400">★</button>
+                    <button class="text-gray-300">★</button>
+                    <button class="text-gray-300">★</button>
+                  </div>
+                  <span class="text-sm text-gray-500">(Rate the game)</span>
+                </div>
+                <button class="bg-game-orange hover:bg-orange-500 text-white font-medium py-2 px-6 rounded-full">
+                  Post Comment
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 评论列表 -->
+        <div class="divide-y divide-amber-100">
+          <div class="p-6">
+            <div class="flex">
+              <div class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center text-white font-bold mr-4">M</div>
+              <div class="flex-grow">
+                <div class="flex justify-between mb-1">
+                  <h3 class="font-bold">MegaClicker</h3>
+                  <div class="text-amber-400">★★★★★</div>
+                </div>
+                <p class="text-gray-700 mb-3">
+                  This game is super addictive! I've been playing for hours and can't stop clicking that chicken!
+                </p>
+                <div class="flex items-center text-sm text-gray-500">
+                  <span>2 days ago</span>
+                  <span class="mx-2">•</span>
+                  <button class="hover:text-game-orange">Like (24)</button>
+                  <span class="mx-2">•</span>
+                  <button class="hover:text-game-orange">Reply</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="p-6">
+            <div class="flex">
+              <div class="w-10 h-10 bg-green-400 rounded-full flex items-center justify-center text-white font-bold mr-4">C</div>
+              <div class="flex-grow">
+                <div class="flex justify-between mb-1">
+                  <h3 class="font-bold">ChickenChampion</h3>
+                  <div class="text-amber-400">★★★★<span class="text-gray-300">★</span></div>
+                </div>
+                <p class="text-gray-700 mb-3">
+                  Really fun game! The golden chicken skin is my favorite. Would give 5 stars but the late game gets a bit grindy.
+                </p>
+                <div class="flex items-center text-sm text-gray-500">
+                  <span>1 week ago</span>
+                  <span class="mx-2">•</span>
+                  <button class="hover:text-game-orange">Like (17)</button>
+                  <span class="mx-2">•</span>
+                  <button class="hover:text-game-orange">Reply</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-amber-50 p-4 text-center">
+          <button class="text-game-orange hover:text-orange-600 font-semibold">
+            Load More Comments
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="bg-white py-6 border-t border-amber-100">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <div class="flex items-center justify-center md:justify-start">
+            <img src="https://img.icons8.com/emoji/48/000000/chicken-emoji.png" alt="Chicken Logo" class="w-8 h-8 mr-2">
+            <span class="game-title text-xl text-game-orange">Chicken Jockey Clicker</span>
+          </div>
+          <p class="text-sm text-gray-500 mt-1 text-center md:text-left">© 2024 All rights reserved</p>
+        </div>
+        
+        <div class="flex space-x-4 mb-4 md:mb-0">
+          <a href="#" class="text-blue-600 hover:text-blue-700">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.85 7.94 9.8v-6.93H7.1v-2.87h2.84v-2.2c0-2.8 1.67-4.35 4.24-4.35 1.23 0 2.52.22 2.52.22v2.77h-1.42c-1.4 0-1.84.87-1.84 1.76v1.8h3.13l-.5 2.87h-2.63v6.93C18.56 20.85 22 16.84 22 12z"/></svg>
+          </a>
+          <a href="#" class="text-black hover:text-gray-700">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.162 2H1.838C.823 2 0 2.823 0 3.838v16.324C0 21.177.823 22 1.838 22h20.324C23.177 22 24 21.177 24 20.162V3.838C24 2.823 23.177 2 22.162 2zm-6.717 14.57-2.172-3.013-2.54 3.013h-1.327l3.186-3.786-3.063-4.17h3.19l1.998 2.745 2.319-2.745h1.302l-3.013 3.493 3.312 4.463h-3.194z"/></svg>
+          </a>
+        </div>
+        
+        <div class="text-sm">
+          <a href="#" class="text-gray-600 hover:text-game-orange mx-2">Privacy Policy</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="text-gray-600 hover:text-game-orange mx-2">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html> 
